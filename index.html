@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>GBLOK</title>
+
+    <meta
+        name="theme-color"
+        content="#0b0f17">
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent">
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="GBLOK">
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <!-- SPLASH -->
+
+    <div
+        id="splashScreen"
+        class="splash-screen">
+
+        <div class="splash-background"></div>
+
+        <div class="splash-content">
+
+            <div class="logo-container">
+
+                <div class="logo-ring"></div>
+
+                <div class="logo-core">
+                    G
+                </div>
+
+            </div>
+
+            <h1 class="splash-title">
+                GBLOK
+            </h1>
+
+            <p class="splash-subtitle">
+                Inicializando sistema...
+            </p>
+
+            <div class="loading-wrapper">
+
+                <div
+                    id="loadingBar"
+                    class="loading-bar">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- APP -->
+
+    <div
+        id="app"
+        class="app hidden">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+
+                <span class="header-mini">
+                    Sistema pessoal
+                </span>
+
+                <h1>
+                    GBLOK
+                </h1>
+
+            </div>
+
+            <button
+                class="settings-btn">
+
+                ⚙
+
+            </button>
+
+        </header>
+
+        <!-- MAIN -->
+
+        <main
+            id="pagesContainer">
+
+            <!-- DASHBOARD -->
+
+            <section
+                id="dashboardPage"
+                class="page active">
+
+                <div class="welcome-card">
+
+                    <h2>
+                        Bem-vindo.
+                    </h2>
+
+                    <p>
+                        Seu painel central.
+                    </p>
+
+                </div>
+
+                <div class="cards-grid">
+
+                    <div class="stat-card">
+
+                        <span>
+                            Média Escolar
+                        </span>
+
+                        <h3 id="mediaEscolar">
+                            0.0
+                        </h3>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>
+                            Tarefas
+                        </span>
+
+                        <h3 id="tarefasPendentes">
+                            0
+                        </h3>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>
+                            Economia
+                        </span>
+
+                        <h3 id="economiaAtual">
+                            R$0
+                        </h3>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>
+                            Metas
+                        </span>
+
+                        <h3 id="metasAtivas">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="section-title">
+                    Atividades rápidas
+                </div>
+
+                <div class="action-grid">
+
+                    <button class="action-card">
+                        Nova tarefa
+                    </button>
+
+                    <button class="action-card">
+                        Registrar nota
+                    </button>
+
+                    <button class="action-card">
+                        Nova meta
+                    </button>
+
+                    <button class="action-card">
+                        Adicionar valor
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- ESCOLA -->
+
+            <section
+                id="escolaPage"
+                class="page">
+
+                <h2>
+                    Escola
+                </h2>
+
+                <div class="page-card">
+
+                    <h3>
+                        Desempenho
+                    </h3>
+
+                    <p>
+                        Suas notas aparecerão aqui.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- OBJETIVOS -->
+
+            <section
+                id="objetivosPage"
+                class="page">
+
+                <h2>
+                    Objetivos
+                </h2>
+
+                <div class="page-card">
+
+                    <h3>
+                        Metas Ativas
+                    </h3>
+
+                    <p>
+                        Nenhuma meta cadastrada.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ESTATÍSTICAS -->
+
+            <section
+                id="estatisticasPage"
+                class="page">
+
+                <h2>
+                    Estatísticas
+                </h2>
+
+                <div class="page-card">
+
+                    <h3>
+                        Evolução
+                    </h3>
+
+                    <p>
+                        Os gráficos aparecerão aqui.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- PERFIL -->
+
+            <section
+                id="perfilPage"
+                class="page">
+
+                <h2>
+                    Perfil
+                </h2>
+
+                <div class="page-card">
+
+                    <h3>
+                        Configurações
+                    </h3>
+
+                    <p>
+                        Personalize seu sistema.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- NAVBAR -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-btn active"
+                data-page="dashboardPage">
+
+                <span>🏠</span>
+                <small>Home</small>
+
+            </button>
+
+            <button
+                class="nav-btn"
+                data-page="escolaPage">
+
+                <span>📚</span>
+                <small>Escola</small>
+
+            </button>
+
+            <button
+                class="nav-btn"
+                data-page="objetivosPage">
+
+                <span>🎯</span>
+                <small>Metas</small>
+
+            </button>
+
+            <button
+                class="nav-btn"
+                data-page="estatisticasPage">
+
+                <span>📊</span>
+                <small>Stats</small>
+
+            </button>
+
+            <button
+                class="nav-btn"
+                data-page="perfilPage">
+
+                <span>👤</span>
+                <small>Perfil</small>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
